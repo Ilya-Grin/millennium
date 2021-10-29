@@ -13,6 +13,13 @@ const cardCreate = () => {
 	img.classList.add('box__img');
 	img.src = 'img/card-img.png';
 
+	for (let i = 0; i < 3; i++) {
+		let block = document.createElement('div');
+		block.classList.add('block');
+		block.classList.add('block' + i);
+		container.append(block);
+	}
+
 	let text = document.createElement('p');
 	text.classList.add('box__text');
 	text.innerHTML = amountRand();
@@ -36,18 +43,17 @@ let counter = 1;
 let sum = 0;
 
 container.forEach(e => {
-	e.onmousemove = (el) => {
-		const round = document.createElement('span');
-		round.style.left = el.offsetX + 'px';
-		round.style.top = el.offsetY + 'px';
-		e.append(round);
-		// if (counter <= 3) {
-		// 	sum += parseInt(e.childNodes[1].getAttribute('value'));
-		// 	e.classList.add('active');
-		// 	e.childNodes[0].classList.add('active');
-		// 	e.childNodes[1].classList.add('active');
-		// 	sumOutput.innerHTML = sum + '.000 &#8364;'
-		// 	counter++;
-		// }
+	e.onclick = (el) => {
+		if (counter <= 3) {
+			sum += parseInt(e.childNodes[4].getAttribute('value'));
+			e.classList.add('active');
+			e.childNodes[0].classList.add('active');
+			setTimeout(function () { e.childNodes[1].classList.add('active'); }, 300);
+			setTimeout(function () { e.childNodes[2].classList.add('active'); }, 600);
+			setTimeout(function () { e.childNodes[3].classList.add('active'); }, 900);
+			e.childNodes[4].classList.add('active');
+			sumOutput.innerHTML = sum + '.000 &#8364;'
+			counter++;
+		}
 	}
 });

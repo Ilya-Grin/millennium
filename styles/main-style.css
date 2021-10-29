@@ -72,16 +72,6 @@ h6 {
 }
 /*--------------------*/
 
-span {
-	width: 50px;
-	height: 50px;
-	background: #000;
-	border-radius: 50px;
-	pointer-events: none;
-	position: absolute;
-	z-index: 10;
-}
-
 .container {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -94,6 +84,7 @@ span {
 	position: relative;
 	background: url("../img/main-bg.jpg") no-repeat;
 	background-size: cover;
+	background-position: fixed;
 }
 
 .main::after {
@@ -143,6 +134,7 @@ span {
 	cursor: pointer;
 	position: relative;
 	border-radius: 150px;
+	overflow: hidden;
 }
 
 .box__img {
@@ -159,6 +151,7 @@ span {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: 0;
+	z-index: 11;
 	font-size: 18px;
 	text-shadow: 1px 1px 3px #000;
 	text-align: center;
@@ -177,4 +170,44 @@ span {
 	opacity: 1;
 	font-size: 26px;
 	transition: opacity 1s, font-size 1.5s;
+}
+
+.block {
+	width: 170px;
+	height: 70px;
+	background: rgb(37, 37, 37);
+	position: absolute;
+	z-index: 10;
+	filter: blur(5px);
+}
+
+.block0 {
+	top: -10px;
+	left: -170px;
+}
+
+.block1 {
+	top: 50px;
+	right: -170px;
+}
+.block2 {
+	top: 100px;
+	left: -170px;
+}
+
+.block0.active {
+	top: -10px;
+	left: -10px;
+	transition: 0.3s;
+}
+
+.block1.active {
+	top: 50px;
+	right: -10px;
+	transition: 0.3s;
+}
+.block2.active {
+	top: 100px;
+	left: -10px;
+	transition: 0.3s;
 }
