@@ -173,7 +173,7 @@ h6 {
 }
 
 .block {
-	width: 60px;
+	width: 170px;
 	height: 70px;
 	background: rgb(37, 37, 37);
 	position: absolute;
@@ -183,16 +183,16 @@ h6 {
 
 .block0 {
 	top: -10px;
-	left: -60px;
+	left: -170px;
 }
 
 .block1 {
 	top: 50px;
-	right: -60px;
+	right: -170px;
 }
 .block2 {
 	top: 100px;
-	left: -60px;
+	left: -170px;
 }
 
 .block0.active {
