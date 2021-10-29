@@ -11,7 +11,7 @@ const cardCreate = () => {
 
 	let img = document.createElement('img');
 	img.classList.add('box__img');
-	img.src = '../img/card-img.png';
+	img.src = 'img/card-img.png';
 
 	let text = document.createElement('p');
 	text.classList.add('box__text');
