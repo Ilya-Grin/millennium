@@ -173,7 +173,7 @@ h6 {
 }
 
 .block {
-	width: 170px;
+	width: 60px;
 	height: 70px;
 	background: rgb(37, 37, 37);
 	position: absolute;
@@ -183,16 +183,16 @@ h6 {
 
 .block0 {
 	top: -10px;
-	left: -170px;
+	left: -60px;
 }
 
 .block1 {
 	top: 50px;
-	right: -170px;
+	right: -60px;
 }
 .block2 {
 	top: 100px;
-	left: -170px;
+	left: -60px;
 }
 
 .block0.active {
@@ -210,4 +210,62 @@ h6 {
 	top: 100px;
 	left: -10px;
 	transition: 0.3s;
+}
+
+@media (max-width: 720px) {
+	.container {
+		padding: 0;
+		max-width: 720px;
+	}
+	.main__box {
+		max-width: 100%;
+	}
+	.box__img {
+		max-width: 60px;
+	}
+	.block {
+		width: 60px;
+		height: 20px;
+		background: rgb(37, 37, 37);
+		position: absolute;
+		z-index: 10;
+		filter: blur(5px);
+	}
+
+	.block0 {
+		top: -10px;
+		left: -60px;
+	}
+
+	.block1 {
+		top: 20px;
+		right: -60px;
+	}
+	.block2 {
+		top: 40px;
+		left: -60px;
+	}
+
+	.block0.active {
+		top: -10px;
+		left: -10px;
+		transition: 0.3s;
+	}
+
+	.block1.active {
+		top: 20px;
+		right: -10px;
+		transition: 0.3s;
+	}
+	.block2.active {
+		top: 40px;
+		left: -10px;
+		transition: 0.3s;
+	}
+	.box__text {
+		font-size: 14px;
+	}
+	.box__text.active {
+		font-size: 18px;
+	}
 }
